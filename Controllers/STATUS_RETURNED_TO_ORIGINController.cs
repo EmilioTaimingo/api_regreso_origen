@@ -46,7 +46,7 @@ namespace api_regreso_origen.Controllers
                 respuesta.Message = "La guia ingresada no pertenece a Liverpool";
                 respuesta.Result = 200;
             }
-            // cambiamos el estatus del paquete
+            //cambiamos el estatus del paquete
             oValidaTipoGuia.RegresoAOrigen(odatos);
 
             return respuesta;
