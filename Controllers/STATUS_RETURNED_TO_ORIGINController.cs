@@ -17,6 +17,8 @@ namespace api_regreso_origen.Controllers
             ValidaGuia oValidaTipoGuia = new ValidaGuia();
             SendEstatusCommand oStatus = new SendEstatusCommand();
             var datos = oValidaTipoGuia.Valida_Guia(odatos.Guide);
+            WooCommerceCommand oWooCommerce = new WooCommerceCommand();
+            oWooCommerce.VerificaGuiaWooCommerce(odatos.Guide, "El paquete a sido devuelto a origen");
             if (datos.Tipo_Guia == 6)
             {
                 //cambiamos el estatus 
